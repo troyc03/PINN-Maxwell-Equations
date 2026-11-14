@@ -38,33 +38,33 @@ The initial milestones are:
 
 The first benchmark family concerns electrostatics. In a region with permittivity \(\epsilon\), the electrostatic potential \(\phi\) satisfies
 
-\[
+$$
 \mathbf{E} = -\nabla \phi,
 \qquad
 \nabla \cdot (\epsilon \nabla \phi) = -\rho,
-\]
+$$
 
 where \(\mathbf{E}\) is the electric field and \(\rho\) is the free charge density. For constant permittivity, this reduces to Poisson's equation,
 
-\[
+$$
 \nabla^2 \phi = -\frac{\rho}{\epsilon}.
-\]
+$$
 
 In charge-free regions, the equation becomes Laplace's equation, \(\nabla^2\phi=0\).
 
 The broader project will address Maxwell's equations. In differential form, the macroscopic equations are
 
-\[
+$$
 \nabla \cdot \mathbf{D} = \rho_f,
 \qquad
 \nabla \cdot \mathbf{B} = 0,
-\]
+$$
 
-\[
+$$
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t},
 \qquad
 \nabla \times \mathbf{H} = \mathbf{J}_f + \frac{\partial \mathbf{D}}{\partial t}.
-\]
+$$
 
 Constitutive relations, material models, source terms, and boundary conditions will be specified for each benchmark. Electrostatic Poisson problems are an initial, restricted case; they are not a substitute for the full time-dependent Maxwell system.
 
@@ -90,21 +90,19 @@ PINNs will approximate unknown fields or potentials using neural networks. Train
 
 For a generic PDE residual \(\mathcal{R}[u_\theta](\mathbf{x},t)\), a physics loss may take the form
 
-\[
-\mathcal{L}_{\mathrm{PDE}}
-=
+$$
+\mathcal{L}_{\mathrm{PDE}} =
 \frac{1}{N_r}
 \sum_{i=1}^{N_r}
 \left|
 \mathcal{R}[u_\theta](\mathbf{x}_i,t_i)
 \right|^2.
-\]
+$$
 
 The complete objective may include additional terms,
 
-\[
-\mathcal{L}
-=
+$$
+\mathcal{L} =
 \lambda_r\mathcal{L}_{\mathrm{PDE}}
 +
 \lambda_b\mathcal{L}_{\mathrm{BC}}
@@ -112,7 +110,7 @@ The complete objective may include additional terms,
 \lambda_i\mathcal{L}_{\mathrm{IC}}
 +
 \lambda_d\mathcal{L}_{\mathrm{data}},
-\]
+$$
 
 with terms included only when relevant to the problem. The effects of network architecture, collocation-point sampling, loss weighting, optimization, and problem scaling will be investigated rather than assumed to be inconsequential.
 
