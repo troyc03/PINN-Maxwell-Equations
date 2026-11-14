@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 1. Grid Setup (from your code)
+# 1. Grid Setup 
 nx, ny, nz = 101, 101, 101
 x = np.linspace(0, 10, nx)
 y = np.linspace(0, 10, ny)
