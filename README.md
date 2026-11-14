@@ -88,10 +88,10 @@ FEM will provide an additional numerical comparison for suitable boundary-value 
 
 PINNs will approximate unknown fields or potentials using neural networks. Training objectives will combine governing-equation residuals with the relevant boundary-condition, initial-condition, and, where appropriate, data-mismatch terms.
 
-For a generic PDE residual \(\mathcal{R}[u_\theta](\mathbf{x},t)\), a physics loss may take the form
+For a generic PDE residual $mathcal{R}[u_\theta](\mathbf{x},t)$, a physics loss may take the form
 
 $$
-\mathcal{L}_{\mathrm{PDE}} =
+\mathcal{L} =
 \frac{1}{N_r}
 \sum_{i=1}^{N_r}
 \left|
